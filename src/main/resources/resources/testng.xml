@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="API Automation Suite" parallel="tests" thread-count="2">
+    <test name="Users API Tests">
+        <classes>
+            <class name="tests.UserTests"/>
+        </classes>
+    </test>
+</suite>

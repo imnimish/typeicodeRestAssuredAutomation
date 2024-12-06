@@ -46,9 +46,9 @@ public class UserTests extends BaseTest {
         // Test Case 3: POST create a new user
         String newUser = """
                 {
-                    "name": "John Doe",
-                    "username": "johndoe",
-                    "email": "johndoe@example.com"
+                    "name": "Nimish Singh",
+                    "username": "imnimish",
+                    "email": "nimish@example.com"
                 }
                 """;
 
@@ -64,7 +64,7 @@ public class UserTests extends BaseTest {
                 .extract().response();
 
         // Validate that the user was created with the correct username
-        Assert.assertEquals(response.jsonPath().getString("username"), "johndoe");
+        Assert.assertEquals(response.jsonPath().getString("username"), "imnimish");
     }
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -72,9 +72,9 @@ public class UserTests extends BaseTest {
         // Test Case 4: PUT update an existing user
         String updatedUser = """
                 {
-                    "name": "John Doe Updated",
-                    "username": "johndoe_updated",
-                    "email": "johndoe_updated@example.com"
+                    "name": "Nimish Singh Updated",
+                    "username": "nimish_updated",
+                    "email": "nimish_updated@example.com"
                 }
                 """;
 
@@ -91,7 +91,7 @@ public class UserTests extends BaseTest {
                 .extract().response();
 
         // Validate that the user details are updated
-        Assert.assertEquals(response.jsonPath().getString("username"), "johndoe_updated");
+        Assert.assertEquals(response.jsonPath().getString("username"), "nimish_updated");
     }
 
 	@Test(retryAnalyzer = RetryAnalyzer.class)
@@ -122,8 +122,8 @@ public class UserTests extends BaseTest {
     @DataProvider(name = "userDataProvider")
     public Object[][] userData() {
         return new Object[][] {
-                { "Alice", "alice", "alice@example.com" },
-                { "Bob", "bob", "bob@example.com" }
+                { "Nimish", "Singh", "Nimish@example.com" },
+                { "Vaibhav", "Vaibhav", "Vaibhav@example.com" }
         };
     }
 

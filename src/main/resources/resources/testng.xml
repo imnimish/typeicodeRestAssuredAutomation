@@ -4,6 +4,7 @@
         <classes>
             <class name="tests.UserPostTest"/>
             <class name="tests.UserTests"/>
+            <class name="tests.CommentsAPITest"/>
         </classes>
     </test>
 </suite>
